@@ -11,6 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import org.securesense.screenpackage.HumidityDataScreen
+import org.securesense.screens.AirQualityDataScreen
+import org.securesense.screens.LightIntensityDataScreen
+import org.securesense.screens.SensorReadingScreen
 import org.securesense.ui.theme.SecureSenseTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +23,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SecureSenseTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                LightIntensityDataScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SecureSenseTheme {
-        Greeting("Android")
     }
 }
