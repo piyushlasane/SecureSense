@@ -58,5 +58,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Add next dependencies below this:
+    implementation(libs.compose.m3)
+    implementation(libs.core)
+    implementation(libs.androidx.material.icons.extended)
 
 }
